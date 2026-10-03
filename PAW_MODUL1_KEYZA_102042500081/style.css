@@ -1,0 +1,62 @@
+:root {
+    --dark: #17171f;
+    --bg: #656582;
+    --card: #ffffff;
+    --text: #1d1d27;
+    --muted: #7a7a88;
+    --green: #1f7a3d;
+    --green-bg: #e3f6e8;
+    --red: #b3261e;
+    --red-bg: #fde7e5;
+    --radius: 16px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Segoe UI", Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
+ 
+header { background: var(--card); border-bottom: 1px solid #e6e6ee; }
+.nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; }
+.logo { font-size: 20px; font-weight: 700; }
+.nav ul { list-style: none; display: flex; gap: 24px; }
+.nav a { text-decoration: none; color: var(--text); font-size: 14px; }
+ 
+.hero { background: var(--dark); color: #fff; border-radius: var(--radius); padding: 64px 48px; margin-top: 24px; }
+.hero small { letter-spacing: 1px; font-size: 12px; opacity: .8; }
+.hero h1 { font-size: 44px; margin: 12px 0; }
+.hero p { font-size: 14px; opacity: .85; margin-bottom: 24px; }
+.btn-hero { display: inline-block; background: #fff; color: var(--dark); padding: 10px 22px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 14px; }
+ 
+.catalog-head { display: flex; justify-content: space-between; align-items: flex-end; margin: 48px 0 20px; gap: 12px; flex-wrap: wrap; }
+.catalog-head small { color: var(--muted); letter-spacing: 1px; font-size: 12px; }
+.catalog-head h2 { font-size: 28px; }
+.total { background: var(--card); border: 1px solid #e6e6ee; border-radius: 10px; padding: 8px 16px; font-size: 14px; }
+ 
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.card { background: var(--card); border: 1px solid #ececf2; border-radius: var(--radius); padding: 22px; display: flex; flex-direction: column; }
+.kategori { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+.badge-diskon { color: var(--text); font-weight: 600; margin-left: 4px; }
+.card h3 { font-size: 20px; margin: 4px 0 12px; }
+.harga-normal { text-decoration: line-through; color: var(--muted); font-size: 13px; }
+.harga { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+.spacer { height: 19px; }
+.info { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #ececf2; margin: 14px 0 18px; padding-top: 14px; font-size: 14px; }
+.status { font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 999px; }
+.status.ada { background: var(--green-bg); color: var(--green); }
+.status.habis { background: var(--red-bg); color: var(--red); }
+.btn-beli { margin-top: auto; width: 100%; padding: 12px; border: none; border-radius: 10px; background: var(--dark); color: #fff; font-weight: 600; font-size: 14px; cursor: pointer; }
+.btn-beli:hover { opacity: .88; }
+.btn-beli:disabled { background: #c9c9d2; cursor: not-allowed; opacity: 1; }
+ 
+footer { margin-top: 64px; background: var(--dark); color: #cfcfd8; text-align: center; padding: 24px 0; font-size: 14px; }
+ 
+@media (max-width: 600px) {
+    .hero { padding: 40px 24px; }
+    .hero h1 { font-size: 32px; }
+    .nav ul { gap: 14px; }
+}
+ 
+.card form { margin-top: auto; }
+.card > .btn-beli:disabled { margin-top: auto; }
+.total a { color: var(--text); font-weight: 600; text-decoration: none; }
+.notif { background: var(--green-bg); color: var(--green); border-radius: 10px; padding: 12px 16px; margin-bottom: 20px; font-size: 14px; font-weight: 600; }
+ 
